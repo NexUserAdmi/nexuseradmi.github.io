@@ -1,0 +1,119 @@
+:root {
+    --color_main: white;
+  }
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    background-image: url("dona.gif");
+    background-repeat: no-repeat;/*imagen de fondo no se repite*/
+    background-position: top;
+    position: relative;
+}
+.main{
+}
+body h1, body a{
+    color: var(--color_main);
+    font-weight: bold;
+}
+body .animated-text{
+    color: transparent;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 100px;
+    background-image: url("vortice.gif");
+    background-position: center;
+    -webkit-background-clip: text;/*posiciona el fondo detras de las letras trasnparentes*/
+    /*background: -webkit-radial-gradient(#560e86, #0a0011);*/
+    text-shadow:0 0 15px var(--color_main);
+    
+}
+.container_menu{
+    /*border: 1px solid white;*/
+    width: 70%;
+    height: 300px;
+    position: fixed;
+    bottom: 5%;
+    right: 15%;
+}
+.animation_class{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.7s;
+}
+.animation_class:hover{
+    background: var(--color_main);
+    box-shadow: 0 0 10px var(--color_main), 0 0 40px var(--color_main), 0 0 80px var(--color_main);
+    transition-delay: 0.4s;
+}
+.animation_class:hover a{
+    color: #000;
+    transition: 1s;
+}
+.animation_class span{
+    position: absolute;
+    display: block;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color_main));
+}
+.animation_class:hover #span1{
+    left: 100%;
+    transition: 0.5s;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--color_main));
+}
+.animation_class:hover #span2{
+    top: 100%;
+    transition: 0.5s;
+    transition-delay: 0.12s;
+}
+#span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, var(--color_main));
+}
+.animation_class:hover #span3{
+    right: 100%;
+    transition: 0.5s;
+    transition-delay: 0.25s;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, var(--color_main));
+}
+.animation_class:hover #span4{
+    bottom: 100%;
+    transition: 0.5s;
+    transition-delay: 0.37s;
+}
+
+@media (max-width: 900px){
+    body .animated-text{
+        font-size: 11vw;
+    }
+}
