@@ -117,3 +117,9 @@ body .animated-text{
         font-size: 11vw;
     }
 }
+
+@media (max-width: 470px){
+    .main h1{
+        font-size: 50px;
+    }
+}
